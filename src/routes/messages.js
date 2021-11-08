@@ -5,7 +5,7 @@ const { Expo } = require("expo-server-sdk");
 const usersStore = require("../store/users");
 const listingsStore = require("../store/listings");
 const messagesStore = require("../store/messages");
-const sendPushNotification = require("../utilities/pushNotifications");
+const sendPushNotification = require("../utils/pushNotifications");
 const auth = require("../middlewares/auth");
 const validateWith = require("../middlewares/validation");
 

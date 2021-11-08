@@ -7,7 +7,7 @@ const sendPushNotification = async (targetExpoPushToken, message) => {
 
   chunks.forEach(async (chunk) => {
     try {
-      const tickets = await expo.sendPushNotificationsAsync(chunk);
+      await expo.sendPushNotificationsAsync(chunk);
     } catch (error) {
       console.log("Error sending chunk", error);
     }
