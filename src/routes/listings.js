@@ -38,7 +38,11 @@ router.get("/", (req, res) => {
 
 router.get("/:id", auth, (req, res) => {
   const listing = store.getListing(parseInt(req.params.id));
-  if (!listing) return res.status(404).send();
+
+  if (!listing) {
+    return res.status(404).send();
+  }
+
   const resource = listingMapper(listing);
   res.send(resource);
 });
