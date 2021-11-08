@@ -26,13 +26,8 @@ const listings = [
   {
     id: 1,
     title: "Room & Board couch (great condition) - delivery included",
-    description:
-      "I'm selling my furniture at a discount price. Pick up at Venice. DM me asap.",
-    images: [
-      { fileName: "couch1" },
-      { fileName: "couch2" },
-      { fileName: "couch3" },
-    ],
+    description: "I'm selling my furniture at a discount price. Pick up at Venice. DM me asap.",
+    images: [{ fileName: "couch1" }, { fileName: "couch2" }, { fileName: "couch3" }],
     price: 1000,
     categoryId: 1,
     userId: 1,

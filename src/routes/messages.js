@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+const { Router } = require("express");
 const Joi = require("joi");
 const { Expo } = require("expo-server-sdk");
 
@@ -9,6 +8,8 @@ const messagesStore = require("../store/messages");
 const sendPushNotification = require("../utilities/pushNotifications");
 const auth = require("../middleware/auth");
 const validateWith = require("../middleware/validation");
+
+const router = Router();
 
 const schema = {
   listingId: Joi.number().required(),
@@ -39,10 +40,14 @@ router.post("/", [auth, validateWith(schema)], async (req, res) => {
   const { listingId, message } = req.body;
 
   const listing = listingsStore.getListing(listingId);
-  if (!listing) return res.status(400).send({ error: "Invalid listingId." });
+  if (!listing) {
+    return res.status(400).send({ error: "Invalid listingId." });
+  }
 
   const targetUser = usersStore.getUserById(parseInt(listing.userId));
-  if (!targetUser) return res.status(400).send({ error: "Invalid userId." });
+  if (!targetUser) {
+    return res.status(400).send({ error: "Invalid userId." });
+  }
 
   messagesStore.add({
     fromUserId: req.user.userId,
@@ -53,8 +58,9 @@ router.post("/", [auth, validateWith(schema)], async (req, res) => {
 
   const { expoPushToken } = targetUser;
 
-  if (Expo.isExpoPushToken(expoPushToken))
+  if (Expo.isExpoPushToken(expoPushToken)) {
     await sendPushNotification(expoPushToken, message);
+  }
 
   res.status(201).send();
 });
