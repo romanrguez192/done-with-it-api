@@ -4,10 +4,10 @@ const multer = require("multer");
 const config = require("config");
 
 const store = require("../store/listings");
-const validateWith = require("../middleware/validation");
-const validateCategoryId = require("../middleware/validateCategoryId");
-const auth = require("../middleware/auth");
-const imageResize = require("../middleware/imageResize");
+const validateWith = require("../middlewares/validation");
+const validateCategoryId = require("../middlewares/validateCategoryId");
+const auth = require("../middlewares/auth");
+const imageResize = require("../middlewares/imageResize");
 const listingMapper = require("../mappers/listings");
 
 const router = Router();

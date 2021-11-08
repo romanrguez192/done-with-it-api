@@ -1,7 +1,7 @@
 const { Router } = require("express");
 
 const listingsStore = require("../store/listings");
-const auth = require("../middleware/auth");
+const auth = require("../middlewares/auth");
 const listingMapper = require("../mappers/listings");
 
 const router = Router();

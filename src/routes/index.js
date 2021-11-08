@@ -10,12 +10,12 @@ const expoPushTokens = require("./expoPushTokens");
 
 const router = Router();
 
-app.use("/categories", categories);
-app.use("/listings", listings);
-app.use("/users", users);
-app.use("/auth", auth);
-app.use("/me", me);
-app.use("/expoPushTokens", expoPushTokens);
-app.use("/messages", messages);
+router.use("/categories", categories);
+router.use("/listings", listings);
+router.use("/users", users);
+router.use("/auth", auth);
+router.use("/me", me);
+router.use("/expoPushTokens", expoPushTokens);
+router.use("/messages", messages);
 
-router.use();
+module.exports = router;

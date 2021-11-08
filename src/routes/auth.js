@@ -3,7 +3,7 @@ const Joi = require("joi");
 const jwt = require("jsonwebtoken");
 
 const usersStore = require("../store/users");
-const validateWith = require("../middleware/validation");
+const validateWith = require("../middlewares/validation");
 
 const router = Router();
 

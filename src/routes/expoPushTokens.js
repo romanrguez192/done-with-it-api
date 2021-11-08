@@ -2,8 +2,8 @@ const { Router } = require("express");
 const Joi = require("joi");
 
 const usersStore = require("../store/users");
-const auth = require("../middleware/auth");
-const validateWith = require("../middleware/validation");
+const auth = require("../middlewares/auth");
+const validateWith = require("../middlewares/validation");
 
 const router = Router();
 

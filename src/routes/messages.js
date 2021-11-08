@@ -6,8 +6,8 @@ const usersStore = require("../store/users");
 const listingsStore = require("../store/listings");
 const messagesStore = require("../store/messages");
 const sendPushNotification = require("../utilities/pushNotifications");
-const auth = require("../middleware/auth");
-const validateWith = require("../middleware/validation");
+const auth = require("../middlewares/auth");
+const validateWith = require("../middlewares/validation");
 
 const router = Router();
 
