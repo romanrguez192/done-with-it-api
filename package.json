@@ -1,30 +1,27 @@
 {
-  "name": "done-with-it-backend",
+  "name": "done-with-it-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index.js"
-  },
-  "engines": {
-    "node": "12.6.x"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
-  "author": "Mosh Hamedani",
+  "author": "Román Rodríguez",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "compression": "^1.7.4",
-    "config": "^3.3.1",
-    "expo-server-sdk": "^3.5.0",
+    "config": "^3.3.6",
+    "expo-server-sdk": "^3.6.0",
     "express": "^4.17.1",
-    "helmet": "^3.22.0",
-    "joi": "^14.3.1",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
-    "multer": "^1.4.2",
-    "sharp": "^0.25.2"
+    "multer": "^1.4.3",
+    "sharp": "^0.29.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.14"
   }
 }
